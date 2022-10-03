@@ -1,5 +1,5 @@
 local Events = {}
-local Figure = workspace:WaitForChild("MADEBYLEMRESY").Raw
+local Figure = game:GetService("Workspace").MADEBYLEMRESY.Raw
 local Torso = Figure:WaitForChild("Torso")
 local RightShoulder = Torso:WaitForChild("Right Shoulder")
 local LeftShoulder = Torso:WaitForChild("Left Shoulder")
