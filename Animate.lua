@@ -532,12 +532,13 @@ table.insert(Events, game:GetService("RunService").Stepped:Connect(function()
     local _, time = wait(0.1)
     move(time)
 end))
-
-while task.wait(0.5) do
-	if not (Figure and Figure.Parent) then
-		for _,v in pairs(Events) do
-			v:Disconnect()
+coroutine.wrap(function()
+	while task.wait(0.5) do
+		if not (Figure and Figure.Parent) then
+			for _,v in pairs(Events) do
+				v:Disconnect()
+			end
+			break
 		end
-		break
 	end
-end
+end)()
